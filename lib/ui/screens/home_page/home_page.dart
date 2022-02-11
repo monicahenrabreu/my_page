@@ -47,6 +47,12 @@ class _HomePageState extends State<HomePage> {
                       PrivateProjects(
                         projects: Constants.privateProjects,
                       ),
+                      const SizedBox(
+                        height: 48,
+                      ),
+                      const Text(
+                        'made by me with Flutter',
+                      ),
                     ],
                   ),
                 )),

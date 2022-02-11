@@ -14,7 +14,7 @@ class Constants {
       query: 'subject=Default Subject&body=Default body').toString();
 
   static Project medicationApp = Project(
-    title: 'Medicaments app',
+    title: 'Medication app',
     description:
         'Helps the user to reminder all the medication throughout the day by notifications.',
     functionalities: [
@@ -32,9 +32,10 @@ class Constants {
       'table_calendar',
       'Code Magic'
     ],
+    uri: gitHubMedicamentionApp,
   );
 
-  static Project reminders = Project(
+  static Project lembretes = Project(
     title: 'Lembretes',
     description: 'Where the user can save and see his reminders.',
     functionalities: [
@@ -44,7 +45,8 @@ class Constants {
       'Localizations with English and Portuguese languages'
     ],
     tags: ['Provider', 'sqflite', 'Localizations', 'Theme'],
+    uri: gitHubLembretes,
   );
 
-  static List<Project> privateProjects = [medicationApp, reminders];
+  static List<Project> privateProjects = [medicationApp, lembretes];
 }

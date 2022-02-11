@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_page/configs/constants.dart';
 import 'package:my_page/data/models/project.dart';
-import 'package:url_launcher/url_launcher.dart';
+import 'package:my_page/ui/widgets/text_link.dart';
 
 class PrivateProject extends StatelessWidget {
   const PrivateProject({Key? key, required this.project}) : super(key: key);
@@ -13,12 +12,11 @@ class PrivateProject extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        InkWell(
-          child: SelectableText(
-            project.title,
-            style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
-          ),
-          onTap: () => launch(Constants.gitHubMedicamentionApp),
+        TextLink(
+          title: project.title,
+          uri: project.uri,
+          fontSize: 18,
+          fontWeight: FontWeight.bold,
         ),
         const SizedBox(
           height: 16,
@@ -29,11 +27,13 @@ class PrivateProject extends StatelessWidget {
         ),
         Padding(
           padding: const EdgeInsets.only(left: 8),
-          child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
+          child:
+              Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
             for (var functionality in project.functionalities)
-              SelectableText('- $functionality'),
+              Padding(
+                padding: const EdgeInsets.only(top: 4.0),
+                child: SelectableText('- $functionality'),
+              ),
           ]),
         ),
         const SizedBox(
