@@ -15,6 +15,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
+        height: MediaQuery.of(context).size.height,
         padding: const EdgeInsets.all(16.0),
         decoration: const BoxDecoration(
             gradient: LinearGradient(

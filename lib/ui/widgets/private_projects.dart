@@ -12,7 +12,7 @@ class PrivateProjects extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
+        SelectableText(
           'Private projects',
           style: Theme.of(context).textTheme.headline6,
         ),

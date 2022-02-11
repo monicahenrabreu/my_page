@@ -9,14 +9,14 @@ class Introduction extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
       children: [
-        Text(
+        SelectableText(
           'Mónica Abreu',
           style: Theme.of(context).textTheme.headline4,
         ),
         const SizedBox(
           height: 24,
         ),
-        Text(
+        SelectableText(
           'Flutter developer',
           style: Theme.of(context).textTheme.headline6,
         ),

@@ -8,6 +8,10 @@ class Constants {
       'https://github.com/monicahenrabreu/lembretes';
   static const String linkedIn =
       'https://www.linkedin.com/in/m%C3%B3nica-abreu-b92b1210b/';
+  static String email = Uri(
+      scheme: 'mailto',
+      path: 'monica.henr.abreu@gmail.com',
+      query: 'subject=Default Subject&body=Default body').toString();
 
   static Project medicationApp = Project(
     title: 'Medicaments app',
@@ -39,12 +43,7 @@ class Constants {
       'Implementation of 2 Themes (light and dark theme) and changing it according to theme based on device settings',
       'Localizations with English and Portuguese languages'
     ],
-    tags: [
-      'Provider',
-      'sqflite',
-      'Localizations',
-      'Theme'
-    ],
+    tags: ['Provider', 'sqflite', 'Localizations', 'Theme'],
   );
 
   static List<Project> privateProjects = [medicationApp, reminders];

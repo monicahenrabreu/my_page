@@ -14,7 +14,7 @@ class PrivateProject extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         InkWell(
-          child: Text(
+          child: SelectableText(
             project.title,
             style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
           ),
@@ -23,14 +23,19 @@ class PrivateProject extends StatelessWidget {
         const SizedBox(
           height: 16,
         ),
-        Text(project.description),
+        SelectableText(project.description),
         const SizedBox(
           height: 8,
         ),
-        Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-          for (var functionality in project.functionalities)
-            Text('⚈ $functionality'),
-        ]),
+        Padding(
+          padding: const EdgeInsets.only(left: 8),
+          child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+            for (var functionality in project.functionalities)
+              SelectableText('- $functionality'),
+          ]),
+        ),
         const SizedBox(
           height: 24,
         ),
@@ -40,7 +45,7 @@ class PrivateProject extends StatelessWidget {
           children: [
             for (var tag in project.tags)
               Chip(
-                label: Text(tag),
+                label: SelectableText(tag),
               ),
           ],
         ),
